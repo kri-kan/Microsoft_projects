@@ -555,64 +555,6 @@
           }
         }
       ]
-    },
-    {
-      "Name": "Publish Packages to Feeds - Release",
-      "Parameters": {
-        "TreatWarningsAsErrors": "false"
-      },
-      "BuildParameters": {
-        "PB_ConfigurationGroup": "Release"
-      },
-      "Definitions": [
-        {
-          "Name": "DotNet-Trusted-Publish",
-          "Parameters": {
-            "PB_VsoRepositoryName": "DotNet-CoreFX-Trusted",
-            "PB_Repo": "corefx"
-          },
-          "ReportingParameters": {
-            "TaskName": "Package Publish",
-            "Type": "build/publish/",
-            "ConfigurationGroup": "Release - Push to MyGet Feed"
-          }
-        }
-      ],
-      "DependsOn": [
-        "Trusted-All-Release-Windows",
-        "Trusted-All-Release-OSX",
-        "Trusted-All-Release-Linux",
-        "Trusted-All-Release-Linux-Crossbuild"
-      ]
-    },
-    {
-      "Name": "Publish Packages to Drop - Debug",
-      "Parameters": {
-        "TreatWarningsAsErrors": "false"
-      },
-      "BuildParameters": {
-        "PB_ConfigurationGroup": "Debug"
-      },
-      "Definitions": [
-        {
-          "Name": "DotNet-Trusted-Publish",
-          "Parameters": {
-            "PB_VsoRepositoryName": "DotNet-CoreFX-Trusted",
-            "PB_Repo": "corefx"
-          },
-          "ReportingParameters": {
-            "TaskName": "Package Publish",
-            "Type": "build/publish/",
-            "ConfigurationGroup": "Debug - Push to Azure Storage"
-          }
-        }
-      ],
-      "DependsOn": [
-        "Trusted-All-Debug-Windows",
-        "Trusted-All-Debug-OSX",
-        "Trusted-All-Debug-Linux",
-        "Trusted-All-Debug-Linux-Crossbuild"
-      ]
-    }    
+    }  
   ]
 }
